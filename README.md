@@ -160,24 +160,14 @@ pip install -r requirements.txt
 
 ## 🗓 Tutorial Agenda (90 minutes)
 
-| Time | Activity |
-|------|---------|
-| 0–15 min | Theory recap: RNN → LSTM → GRU (slides from SLP3 Ch.13) |
-| 15–25 min | Walk through data loading & tokenization |
-| 25–50 min | Implement & train all three models (run cells together) |
-| 50–65 min | Evaluate: perplexity curves, comparison table |
-| 65–80 min | Text generation demo & qualitative comparison |
-| 80–90 min | Discussion: When to use which? Transformers vs RNNs? |
-
----
-
-## 👥 Authors
-
-- **Suraj** — [GitHub: @suraj]
-- **Debajyoti** — [GitHub: @debajyoti]
-
-*Tutorial prepared for the NLP/Deep Learning course, March 2026.*  
-*Reviewed and approved by Course Instructors.*
+| Activity |
+|---------|
+| Theory recap: RNN → LSTM → GRU (slides from SLP3 Ch.13) |
+| Walk through data loading & tokenization |
+| Implement & train all three models (run cells together) |
+| Evaluate: perplexity curves, comparison table |
+| Text generation demo & qualitative comparison |
+| Discussion: When to use which? Transformers vs RNNs? |
 
 ---
 
