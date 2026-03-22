@@ -23,9 +23,12 @@ By the end of this tutorial, participants will be able to:
 
 ## 🚀 Quick Start — Run in Google Colab
 
-Click the badge below to open the notebook directly in Colab:
+Click the badge to open a notebook directly in Colab:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/debajyotimaz/Autoregressive-Language-Models/blob/main/AutoregressiveLM_Tutorial.ipynb)
+| Notebook | Description |
+|---|---|
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/debajyotimaz/Autoregressive-Language-Models/blob/main/AutoregressiveLM_Tutorial.ipynb) | **Teacher Forcing** — standard training loop |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/debajyotimaz/Autoregressive-Language-Models/blob/main/AutoregressiveLM_Tutorial_ARTrain.ipynb) | **Autoregressive Training** — model feeds its own predictions |
 
 > **Recommended:** Use a **GPU runtime** in Colab (`Runtime → Change runtime type → T4 GPU`) for faster training.
 
