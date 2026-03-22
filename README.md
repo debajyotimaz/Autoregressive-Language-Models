@@ -1,8 +1,7 @@
 # 🧠 Autoregressive Language Models: RNN vs LSTM vs GRU
 
 > **Tutorial for CS/NLP Lab | Monday, 23rd March 2026**  
-> Prepared by **Suraj** and **Debajyoti** | Reviewed by Course Instructors  
-> Theory grounded in: [Jurafsky & Martin, SLP3 — Chapter 13: RNNs and LSTMs](https://web.stanford.edu/~jurafsky/slp3/13.pdf)
+> Prepared by **Suraj** and **Debajyoti** | Reviewed by Course Instructors
 
 ---
 
@@ -12,7 +11,7 @@ This repository provides a **hands-on, end-to-end tutorial** on building **Autor
 
 By the end of this tutorial, participants will be able to:
 
-1. Understand the theory of RNNs, LSTMs, and GRUs (following SLP3 Ch.13)
+1. Understand the theory of RNNs, LSTMs, and GRUs
 2. Implement all three architectures from scratch in PyTorch
 3. Train autoregressive language models on Wikipedia data
 4. Evaluate models using **Perplexity** and **BLEU score**
@@ -65,45 +64,13 @@ autoregressive-lm-tutorial/
 
 ---
 
-## 📚 Theoretical Background
+## 📚 Architecture Overview
 
-This tutorial is built directly on the theory from **SLP3 Chapter 13** by Jurafsky & Martin. Here's a quick map of concepts to notebook sections:
-
-| SLP3 Section | Concept | Notebook Section |
-|---|---|---|
-| §13.1 | RNN architecture, forward inference, BPTT | Section 2 |
-| §13.2 | RNNs as language models, teacher forcing | Section 3 |
-| §13.2.3 | Weight tying | Section 4 |
-| §13.3.3 | Autoregressive generation | Section 6 |
-| §13.5 | Vanishing gradients → LSTM motivation | Section 2.3 |
-| §13.6 | LSTM gates (input, forget, output) | Section 2.4 |
-| §13.7 | GRU (simplified LSTM) | Section 2.5 |
-
-### Key Equations (from SLP3 Ch.13)
-
-**Vanilla RNN:**
-```
-hₜ = g(U·hₜ₋₁ + W·eₜ)
-ŷₜ = softmax(Eᵀ·hₜ)          [weight tying]
-```
-
-**LSTM:**
-```
-fₜ = σ(Uf·hₜ₋₁ + Wf·xₜ)     [forget gate]
-iₜ = σ(Ui·hₜ₋₁ + Wi·xₜ)     [input gate]
-oₜ = σ(Uo·hₜ₋₁ + Wo·xₜ)     [output gate]
-c̃ₜ = tanh(Ug·hₜ₋₁ + Wg·xₜ) [cell update]
-cₜ = fₜ⊙cₜ₋₁ + iₜ⊙c̃ₜ        [cell state]
-hₜ = oₜ⊙tanh(cₜ)             [hidden state]
-```
-
-**GRU:**
-```
-zₜ = σ(Uz·hₜ₋₁ + Wz·xₜ)     [update gate]
-rₜ = σ(Ur·hₜ₋₁ + Wr·xₜ)     [reset gate]
-h̃ₜ = tanh(U·(rₜ⊙hₜ₋₁) + W·xₜ)
-hₜ = (1-zₜ)⊙hₜ₋₁ + zₜ⊙h̃ₜ
-```
+| Architecture | Gates | Memory | Characteristic |
+|---|---|---|---|
+| **Vanilla RNN** | — (tanh only) | Hidden state only | Simple; suffers from vanishing gradients |
+| **LSTM** | Forget, Input, Output | Cell state + hidden | Best long-range memory |
+| **GRU** | Update, Reset | Hidden state | ~25% fewer params than LSTM |
 
 ---
 
@@ -165,7 +132,7 @@ pip install -r requirements.txt
 
 | Activity |
 |---------|
-| Theory recap: RNN → LSTM → GRU (slides from SLP3 Ch.13) |
+| Theory recap: RNN → LSTM → GRU |
 | Walk through data loading & tokenization |
 | Implement & train all three models (run cells together) |
 | Evaluate: perplexity curves, comparison table |
@@ -176,9 +143,8 @@ pip install -r requirements.txt
 
 ## 📖 References
 
-1. Jurafsky, D. & Martin, J.H. (2026). *Speech and Language Processing*, 3rd ed., Chapter 13. https://web.stanford.edu/~jurafsky/slp3/13.pdf
-2. Elman, J.L. (1990). Finding structure in time. *Cognitive Science*, 14(2), 179–211.
-3. Hochreiter, S. & Schmidhuber, J. (1997). Long short-term memory. *Neural Computation*, 9(8), 1735–1780.
-4. Cho, K. et al. (2014). Learning phrase representations using RNN encoder–decoder for statistical machine translation. *EMNLP 2014*.
-5. Mikolov, T. et al. (2010). Recurrent neural network based language model. *Interspeech 2010*.
-6. Merity, S. et al. (2017). Pointer Sentinel Mixture Models (WikiText-2 dataset). *ICLR 2017*.
+1. Elman, J.L. (1990). Finding structure in time. *Cognitive Science*, 14(2), 179–211.
+2. Hochreiter, S. & Schmidhuber, J. (1997). Long short-term memory. *Neural Computation*, 9(8), 1735–1780.
+3. Cho, K. et al. (2014). Learning phrase representations using RNN encoder–decoder for statistical machine translation. *EMNLP 2014*.
+4. Mikolov, T. et al. (2010). Recurrent neural network based language model. *Interspeech 2010*.
+5. Merity, S. et al. (2017). Pointer Sentinel Mixture Models (WikiText-2 dataset). *ICLR 2017*.
