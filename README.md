@@ -33,37 +33,6 @@ Click the badge to open a notebook directly in Colab:
 
 ---
 
-## 📁 Repository Structure
-
-```
-autoregressive-lm-tutorial/
-│
-├── AutoregressiveLM_Tutorial.ipynb   # ← MAIN Colab Notebook (start here)
-│
-├── README.md                          # This file
-│
-├── models/
-│   ├── rnn_model.py                   # Vanilla RNN language model
-│   ├── lstm_model.py                  # LSTM language model
-│   └── gru_model.py                   # GRU language model
-│
-├── utils/
-│   ├── dataset.py                     # Wikipedia data loader & tokenizer
-│   ├── train.py                       # Training loop (shared for all models)
-│   ├── evaluate.py                    # Perplexity & BLEU evaluation
-│   └── generate.py                    # Autoregressive text generation
-│
-├── data/
-│   └── README.md                      # Data download instructions
-│
-├── results/
-│   └── comparison_results.md          # Pre-run results & analysis
-│
-└── requirements.txt                   # Python dependencies
-```
-
----
-
 ## 📚 Architecture Overview
 
 | Architecture | Gates | Memory | Characteristic |
