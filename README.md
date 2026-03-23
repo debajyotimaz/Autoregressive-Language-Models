@@ -1,7 +1,7 @@
 # 🧠 Autoregressive Language Models: RNN vs LSTM vs GRU
 
-> **Tutorial for CS/NLP Lab | Monday, 23rd March 2026**  
-> Prepared by **Suraj** and **Debajyoti** | Reviewed by Course Instructors
+> **Tutorial for NLP Lab | Tuesday, 24th March 2026**  
+> Prepared by **Suraj** and **Debajyoti** 
 
 ---
 
@@ -97,23 +97,6 @@ pip install -r requirements.txt
 
 ---
 
-## 🗓 Tutorial Agenda (90 minutes)
-
-| Activity |
-|---------|
-| Theory recap: RNN → LSTM → GRU |
-| Walk through data loading & tokenization |
-| Implement & train all three models (run cells together) |
-| Evaluate: perplexity curves, comparison table |
-| Text generation demo & qualitative comparison |
-| Discussion: When to use which? Transformers vs RNNs? |
-
----
-
 ## 📖 References
 
-1. Elman, J.L. (1990). Finding structure in time. *Cognitive Science*, 14(2), 179–211.
-2. Hochreiter, S. & Schmidhuber, J. (1997). Long short-term memory. *Neural Computation*, 9(8), 1735–1780.
-3. Cho, K. et al. (2014). Learning phrase representations using RNN encoder–decoder for statistical machine translation. *EMNLP 2014*.
-4. Mikolov, T. et al. (2010). Recurrent neural network based language model. *Interspeech 2010*.
-5. Merity, S. et al. (2017). Pointer Sentinel Mixture Models (WikiText-2 dataset). *ICLR 2017*.
+1. Jurafsky, D., & Martin, J. H. (2026). Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models (3rd edn).
