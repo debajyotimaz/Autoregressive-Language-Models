@@ -14,7 +14,7 @@ By the end of this tutorial, participants will be able to:
 1. Understand the theory of RNNs, LSTMs, and GRUs
 2. Implement all three architectures from scratch in PyTorch
 3. Train autoregressive language models on Wikipedia data
-4. Evaluate models using **Perplexity** and **BLEU score**
+4. Evaluate models using **Perplexity**
 5. Generate text autoregressively from each trained model
 6. Compare architectures **quantitatively** (metrics) and **qualitatively** (generated text)
 
