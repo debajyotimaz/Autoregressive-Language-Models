@@ -1,22 +1,21 @@
 # Autoregressive Language Models: RNN vs LSTM vs GRU
 
-> **Tutorial for NLP Lab | Tuesday, 24th March 2026**  
+> **Tutorial for NLP Jan 2026 (DSE 318/401/607) | Tuesday, 24th March 2026**  
 > Prepared by **Suraj** and **Debajyoti** 
 
 ---
 
 ## What This Tutorial Covers
 
-This repository provides a **hands-on, end-to-end tutorial** on building **Autoregressive Language Models** using three recurrent architectures — **Vanilla RNN**, **LSTM**, and **GRU** — trained on a real Wikipedia text corpus using PyTorch.
+This repository provides a **hands-on, end-to-end tutorial** on building **Autoregressive Language Models** using three recurrent architectures — **RNN**, **LSTM**, and **GRU** — trained on a real Wikipedia text corpus using PyTorch.
 
 By the end of this tutorial, participants will be able to:
 
-1. Understand the theory of RNNs, LSTMs, and GRUs
-2. Implement all three architectures from scratch in PyTorch
-3. Train autoregressive language models on Wikipedia data
-4. Evaluate models using **Perplexity**
-5. Generate text autoregressively from each trained model
-6. Compare architectures **quantitatively** (metrics) and **qualitatively** (generated text)
+1. Implement all three architectures from scratch in PyTorch
+2. Train autoregressive language models on Wikipedia data
+3. Evaluate models using **Perplexity**
+4. Generate text autoregressively from each trained model
+5. Compare architectures **quantitatively** (metrics) and **qualitatively** (generated text)
 
 ---
 
@@ -37,9 +36,9 @@ Click the badge to open a notebook directly in Colab:
 
 | Architecture | Gates | Memory | Characteristic |
 |---|---|---|---|
-| **Vanilla RNN** | — (tanh only) | Hidden state only | Simple; suffers from vanishing gradients |
-| **LSTM** | Forget, Input, Output | Cell state + hidden | Best long-range memory |
-| **GRU** | Update, Reset | Hidden state | ~25% fewer params than LSTM |
+| **RNN** | — (tanh only) | Hidden state only | Suffers from vanishing gradients |
+| **LSTM** | Forget, Input, Output | Cell state + hidden | Long-range memory |
+| **GRU** | Update, Reset | Hidden state | fewer params than LSTM |
 
 ---
 
