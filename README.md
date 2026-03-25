@@ -25,8 +25,9 @@ Click the badge to open a notebook directly in Colab:
 
 | Notebook | Description |
 |---|---|
-| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/debajyotimaz/Autoregressive-Language-Models/blob/main/AutoregressiveLM_Tutorial.ipynb) | **Teacher Forcing** — standard training loop |
-| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/debajyotimaz/Autoregressive-Language-Models/blob/main/AutoregressiveLM_Tutorial_ARTrain.ipynb) | **Autoregressive Training** — model feeds its own predictions |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/debajyotimaz/Autoregressive-Language-Models/blob/main/training_by_teacher_forcing.ipynb) | **Teacher Forcing** — standard training loop |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/debajyotimaz/Autoregressive-Language-Models/blob/main/training_by_autoreg.ipynb) | **Autoregressive Training** — model feeds its own predictions |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/debajyotimaz/Autoregressive-Language-Models/blob/main/training_by_teacher_forcing.ipynb) | **Hybrid Training** — Use both |
 
 > **Recommended:** Use a **GPU runtime** in Colab (`Runtime → Change runtime type → T4 GPU`) for faster training.
 
